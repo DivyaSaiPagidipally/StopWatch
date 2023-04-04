@@ -1,0 +1,35 @@
+#bg
+{
+    background-image: url('https://img.freepik.com/premium-photo/3d-illustration-round-clock-stopwatch-black-background-stopwatch-icon-logo-chronometer-vintage-timer_116124-11465.jpg?w=2000');
+    background-size: cover;
+    height: 100vh;
+}
+#time
+{
+    text-align:center;
+    color:aliceblue;
+    padding-top: 30%;
+    font-size: 100px;
+}
+.button
+{
+    text-align: center;
+    font-size: 500%;
+    background-color: black;
+    color: aliceblue;
+}
+#start_btn{
+    text-align: center;
+    height: 40px;
+    width: 120px;
+}
+#stop_btn{
+    text-align: center;
+    height: 40px;
+    width: 120px;;
+}
+#restart_btn{
+    text-align: center;
+    height: 40px;
+    width: 120px;
+}
