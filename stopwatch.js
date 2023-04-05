@@ -21,18 +21,7 @@ start.addEventListener('click',function(){
             hoursTemp=hoursTemp+1;
         }
         }
-        if(secondsTemp<10)
-        {seconds.innerHTML="0"+secondsTemp;}
-        else
-        {seconds.innerHTML=secondsTemp;}
-        if(minutesTemp<10)
-        {minutes.innerHTML="0"+minutesTemp;}
-        else
-        {minutes.innerHTML=minutesTemp;}
-        if(hoursTemp<10)
-        {hours.innerHTML="0"+hoursTemp;}
-        else
-        {hours.innerHTML=hoursTemp;}
+      appendPrint(secondsTemp,minutesTemp,hoursTemp);
     },1000);    
 });
 end.addEventListener('click',function(){
@@ -47,4 +36,17 @@ reset.addEventListener('click',function(){
     minutes.innerHTML="00";
     hours.innerHTML="00";
 });
-
+function appendPrint(secondsTemp,minutesTemp,hoursTemp)
+{if(secondsTemp<10)
+    {seconds.innerHTML="0"+secondsTemp;}
+    else
+    {seconds.innerHTML=secondsTemp;}
+    if(minutesTemp<10)
+    {minutes.innerHTML="0"+minutesTemp;}
+    else
+    {minutes.innerHTML=minutesTemp;}
+    if(hoursTemp<10)
+    {hours.innerHTML="0"+hoursTemp;}
+    else
+    {hours.innerHTML=hoursTemp;}
+}
