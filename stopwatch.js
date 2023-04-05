@@ -1,7 +1,10 @@
 let secondsTemp=0,minutesTemp=0,hoursTemp=0;
 let start=document.getElementById('startButton');
 let end=document.getElementById('stopButton');
-let reset=document.getElementById('restartButton');
+let reset=document.getElementById('resetButton');
+let seconds=document.getElementById("second");
+let minutes=document.getElementById("minute");
+let hours=document.getElementById("hour");
 let intervalId=null;
 start.addEventListener('click',function(){
     clearInterval(intervalId);
@@ -13,23 +16,23 @@ start.addEventListener('click',function(){
             minutesTemp=minutesTemp+1;
             if(minutesTemp==60)
         {
-            seconds=0;
+            secondsTemp=0;
             minutesTemp=0;
             hoursTemp=hoursTemp+1;
         }
         }
         if(secondsTemp<10)
-        {document.getElementById("second").innerHTML="0"+secondsTemp;}
+        {seconds.innerHTML="0"+secondsTemp;}
         else
-        {document.getElementById("second").innerHTML=secondsTemp;}
+        {seconds.innerHTML=secondsTemp;}
         if(minutesTemp<10)
-        {document.getElementById("minute").innerHTML="0"+minutesTemp;}
+        {minutes.innerHTML="0"+minutesTemp;}
         else
-        {document.getElementById("minute").innerHTML=minutesTemp;}
+        {minutes.innerHTML=minutesTemp;}
         if(hoursTemp<10)
-        {document.getElementById("hour").innerHTML="0"+hoursTemp;}
+        {hours.innerHTML="0"+hoursTemp;}
         else
-        {document.getElementById("hour").innerHTML=hoursTemp;}
+        {hours.innerHTML=hoursTemp;}
     },1000);    
 });
 end.addEventListener('click',function(){
@@ -40,8 +43,8 @@ reset.addEventListener('click',function(){
     secondsTemp=0;
     minutesTemp=0;
     hoursTemp=0;
-    document.getElementById("second").innerHTML="00";
-    document.getElementById("minute").innerHTML="00";
-    document.getElementById("hour").innerHTML="00";
+    seconds.innerHTML="00";
+    minutes.innerHTML="00";
+    hours.innerHTML="00";
 });
 
