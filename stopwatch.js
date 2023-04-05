@@ -1,45 +1,45 @@
-let s=0,m=0,h=0;
-let a=document.getElementById('start_btn');
-let b=document.getElementById('stop_btn');
-let c=document.getElementById('restart_btn');
+let secondsTemp=0,minutesTemp=0,hoursTemp=0;
+let start=document.getElementById('startButton');
+let end=document.getElementById('stopButton');
+let reset=document.getElementById('restartButton');
 let intervalId=null;
-a.addEventListener('click',function(){
+start.addEventListener('click',function(){
     clearInterval(intervalId);
     intervalId=setInterval(function(){
-        s=s+1;
-        if(s==60)
+        secondsTemp=secondsTemp+1;
+        if(secondsTemp==60)
         {
-            s=0;
-            m=m+1;
-            if(m==60)
+            secondsTemp=0;
+            minutesTemp=minutesTemp+1;
+            if(minutesTemp==60)
         {
-            s=0;
-            m=0;
-            h=h+1;
+            seconds=0;
+            minutesTemp=0;
+            hoursTemp=hoursTemp+1;
         }
         }
-        if(s<10)
-        {document.getElementById("second").innerHTML="0"+s;}
+        if(secondsTemp<10)
+        {document.getElementById("second").innerHTML="0"+secondsTemp;}
         else
-        {document.getElementById("second").innerHTML=s;}
-        if(m<10)
-        {document.getElementById("minute").innerHTML="0"+m;}
+        {document.getElementById("second").innerHTML=secondsTemp;}
+        if(minutesTemp<10)
+        {document.getElementById("minute").innerHTML="0"+minutesTemp;}
         else
-        {document.getElementById("minute").innerHTML=m;}
-        if(h<10)
-        {document.getElementById("hour").innerHTML="0"+h;}
+        {document.getElementById("minute").innerHTML=minutesTemp;}
+        if(hoursTemp<10)
+        {document.getElementById("hour").innerHTML="0"+hoursTemp;}
         else
-        {document.getElementById("hour").innerHTML=h;}
+        {document.getElementById("hour").innerHTML=hoursTemp;}
     },1000);    
 });
-b.addEventListener('click',function(){
+end.addEventListener('click',function(){
     clearInterval(intervalId);
 });
-c.addEventListener('click',function(){
+reset.addEventListener('click',function(){
     clearInterval(intervalId);
-    s=0;
-    m=0;
-    h=0;
+    secondsTemp=0;
+    minutesTemp=0;
+    hoursTemp=0;
     document.getElementById("second").innerHTML="00";
     document.getElementById("minute").innerHTML="00";
     document.getElementById("hour").innerHTML="00";
